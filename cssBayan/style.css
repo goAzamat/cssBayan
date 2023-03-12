@@ -4,22 +4,22 @@ body {
   background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 .main {
   margin: 0 auto;
   width: 50%;
   cursor: pointer;
   }
+
   h1 {  
     padding: 1vw ;
     font-size: 2vw;
     font-weight: 700;
     color: rgba(90, 90, 88, 0.9);
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.2vw;
     text-align: center;
     margin-bottom: 1vw;
     border-radius: 0vw;
-    box-shadow: 0 0 0px 2px rgba(31, 150, 180, 0.8);
+    box-shadow: 0 0 0px 0.2px rgba(31, 150, 180, 0.8);
     transition: 0.3s;
   }
   
@@ -42,6 +42,31 @@ body {
 .accordion__label,
 .accordion__content {
   padding:  2.5vw;
+  border-bottom: 1px solid rgba(31, 150, 180, 0.8);
+}
+
+.accordion__label h2 {
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5vw ;
+  font-size: 1.5vw;
+  color: rgba(56, 56, 40, 0.9);
+  letter-spacing: 0.3vw;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.accordion__label h2:hover {
+color: rgb(227, 218, 222);
+}
+
+input:checked~.accordion__label{
+  transition: all 0.5s ease-out;
+}
+
+
+input:checked~.accordion__label img {
+  height: 80vw;
+  padding: 1em;
 }
 
 .accordion__label {
@@ -75,12 +100,19 @@ body {
   line-height: 1.6;
   font-size: 0.85em;
   display: none;
+  transition: margin-right 4s;
 }
 
-img {
+.accordion__content p img {
   width: 100%;
   height: auto;
-  transition: 0.50s ease;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.accordion__content p img:hover {
+  transform: scale(1.3);
+  cursor: pointer;
 }
 
 .accordion__input {
@@ -95,90 +127,29 @@ img {
   transform: translateY(-50%) rotate(0.5turn);
 }
 
+@media (hover: hover) {
 
+   .accordion__label h2 {
+    color: rgb(227, 218, 222);
+  }
 
-
-
-
-/* 
-
-*::before
-*::after {
-  box-sizing: border-box;
+  h1:hover {
+    background-color: rgba(23, 132, 160, 0.8);
+  }
 }
 
+@media only screen and (min-width: 820px) {
 
-.main {
-margin: 0 auto;
-width: 50vw;
-background-color: rgba(157, 193, 104, 0.8);
-cursor: pointer;
+  h1 {
+    font-size: 2.1em;
+    letter-spacing: normal;
+    line-height: 2.4;
+  }
+ 
+  h2 {
+    font-size: 2.0em;
+    line-height: 1.4;
+  }
+
 }
-
-
-h1 {  
-  font-size: 3vw;
-  font-weight: 700;
-  color: rgba(90, 90, 88, 0.9);
-  letter-spacing: 0.3vw;
-  text-align: center;
-  margin-bottom: 1vw;
-  border-radius: 3vw;
-  box-shadow: 0 0 10px 2px rgba(31, 150, 180, 0.8);
-  transition: 0.3s;
-}
-
-h1:hover {
-  background-color: rgba(23, 132, 160, 0.8);
-  color: rgb(240, 236, 231);
-  transition-delay: 0.1s;
-}
-
-.tab {
-  list-style: none;
-  width: 100%;
-  margin-bottom: 1vw;
-  background: #fff;
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-}
-
-.tab input {
-  appearance: none;
-}
-.text-label {
-  padding: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.text-label h2 {
-  font-size: 1.4vw;
-  font-weight: 600;
-}
-
-.cssBayan .content {
-  padding: 0 10px;
-  line-height: 26px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s;
-}
-
-
-img {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-}
-
-.lazy-meme{
-  width: 0;
-  margin: 0 auto;
-  transition: .3s ease-in-out;
-}
- */
 
