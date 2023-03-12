@@ -152,4 +152,16 @@ input:checked~.accordion__label img {
   }
 
 }
+@media only screen and (min-width: 450px) {
+  h1 {
+      font-size: 1.8em;
+      line-height: 2.5;
+  }
 
+  h2 {
+      font-size: 1.2em;
+      line-height: 1.6;
+  }
+
+
+}
